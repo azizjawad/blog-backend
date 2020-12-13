@@ -10,7 +10,7 @@ const Posts  = require('./controller/posts')
 const app = express();
 
 // Set a Server Port 
-const port = 4200;
+const port = process.env.PORT || 3000;
 
 //Lets Connect to database
 //Local link: mongodb://localhost:27017/blog
