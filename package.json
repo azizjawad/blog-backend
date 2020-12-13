@@ -4,7 +4,7 @@
   "description": "Create a crud operation with jwt authentication",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "node index.js"
   },
   "author": "Aziz Jawadwala",
   "license": "ISC",
