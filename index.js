@@ -12,7 +12,7 @@ const app = express();
 // Set a Server Port 
 const port = 4200;
 
-// Connect to database
+//Lets Connect to database
 //Local link: mongodb://localhost:27017/blog
 //Cloud link: mongodb+srv://admin:admin1212@node-blog.okf6u.mongodb.net/blog?retryWrites=true&w=majority
 let url = "mongodb+srv://admin:admin1212@node-blog.okf6u.mongodb.net/blog?retryWrites=true&w=majority";
@@ -34,7 +34,7 @@ app.use('/api/get', User);
 app.use('/api/posts', Posts);
 
 app.get('/', (req, res) => {
-    res.send(`Server is up and running on port ${port}`);
+    res.send(`Node Server is up and running on port ${port}`);
 });
 
 app.listen(port, () => console.log(`Server is up and running on port ${port}`));
