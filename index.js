@@ -13,8 +13,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 //Lets Connect to database
-//Local link: mongodb://localhost:27017/blog
-//Cloud link: mongodb+srv://admin:admin1212@node-blog.okf6u.mongodb.net/blog?retryWrites=true&w=majority
+//Local DB Link: mongodb://localhost:27017/blog
 let url = "mongodb+srv://admin:admin1212@node-blog.okf6u.mongodb.net/blog?retryWrites=true&w=majority";
 mongoose.connect(url, { useNewUrlParser: true } , (err) => {
   if (err) throw err;
