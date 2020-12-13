@@ -4,7 +4,6 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const {registerValidation, loginValidation} = require('../validation');
 
-
 router.post('/register', async (req, res) => {
     const post = req.body;
     
@@ -45,14 +44,14 @@ router.post('/login', async (req, res) => {
 
     // Check if user exists in the database
     const user = await User.findOne({email: post.email});
-    if(!user) res.status(400).send({status:false, msg:'email id does not exists'});
+    if(!user) res.send({status:false, msg:'email id does not exists'});
     
     // Check Paswords 
     const validPass = await bcrypt.compare(post.password, user.password);
-    if(!validPass) res.status(400).send({status:false, msg:'Incorrect password'});
+    if(!validPass) res.send({status:false, msg:'Incorrect password'});
     else {
-        const token = jwt.sign({id: user._id}, 'jsonwebsecrettoken123');
-        res.header('auth-token', token).send({status:true, token});
+        const token = jwt.sign({id: user._id}, 'jsonwebsecrettoken123',{ expiresIn: '1h' });
+        res.send({status:true, token});
     }
 });
 
