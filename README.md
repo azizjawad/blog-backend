@@ -14,7 +14,7 @@ The entire application is contained within the `index.js` file.
     
 ## REST API
 
-######API URL https://blog-node-server-1.herokuapp.com/api
+###### API URL https://blog-node-server-1.herokuapp.com/api
 **********
 ### Request
 
@@ -76,7 +76,7 @@ The entire application is contained within the `index.js` file.
 
 `headers: {auth-token: ***}`
 
-#####Payload
+##### Payload
 
 	{ 
         "id": <post_id>,
