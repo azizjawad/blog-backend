@@ -1,4 +1,4 @@
-# REST API CRUD App
+# NODE JS REST API CRUD App using JWT
 
 This is a blog posts application providing a REST
 
