@@ -13,9 +13,9 @@ const app = express();
 const port = 4200;
 
 // Connect to database
-// mongodb://localhost:27017/blog
+//Local link: mongodb://localhost:27017/blog
 //Cloud link: mongodb+srv://admin:admin1212@node-blog.okf6u.mongodb.net/blog?retryWrites=true&w=majority
-let url = "mongodb://localhost:27017/blog";
+let url = "mongodb+srv://admin:admin1212@node-blog.okf6u.mongodb.net/blog?retryWrites=true&w=majority";
 mongoose.connect(url, { useNewUrlParser: true } , (err) => {
   if (err) throw err;
   console.log("Mongo DB Connected!");
@@ -32,5 +32,9 @@ app.use(express.json());
 app.use('/api/user', Auth);
 app.use('/api/get', User);
 app.use('/api/posts', Posts);
+
+app.get('/', (req, res) => {
+    res.send(`Server is up and running on port ${port}`);
+});
 
 app.listen(port, () => console.log(`Server is up and running on port ${port}`));
