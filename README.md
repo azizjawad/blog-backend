@@ -1,6 +1,6 @@
 # NODE JS REST API CRUD App using JWT
 
-This is a blog posts application providing a REST
+This is a blog posts application Provides RESTful API
 
 The entire application is contained within the `index.js` file.
 
