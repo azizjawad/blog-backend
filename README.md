@@ -21,6 +21,7 @@ The entire application is contained within the `index.js` file.
 `POST /user/register`
 
 #####Payload
+
 	{ 
         "name" : "admin",
         "email": "admin@gmail.com",
@@ -33,11 +34,14 @@ The entire application is contained within the `index.js` file.
 `POST /user/login`
 
 #####Payload
+
 	{ 
         "email": "admin@gmail.com",
         "password": "admin@1212"
 	}
+	
 #####Response
+
     { 
         "status": "true",
         "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmZDU0NjgxMjZjZDMzMTY5NGE5MjdhZSIsImlhdCI6MTYwNzg2NTk4MSwiZXhwIjoxNjA3ODY5NTgxfQ.cYFfnwVC6RcexC1aCtBKqc2Q8H0g1JH27IdHjQqiJD4"
@@ -51,12 +55,13 @@ The entire application is contained within the `index.js` file.
 `headers: {auth-token: ***}`
 
 #####Payload
+
 	{ 
         "title": "Lorem impsum",
         "description": "lorem impsum is simply a dummy",
         "featured_image": binary
 	}    
-**********
+	
 **********
 ### Request
 `GET /posts/get/:id`
@@ -70,7 +75,9 @@ The entire application is contained within the `index.js` file.
 `DELETE /posts/delete`
 
 `headers: {auth-token: ***}`
+
 #####Payload
+
 	{ 
         "id": <post_id>,
 	}    
