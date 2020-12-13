@@ -20,7 +20,7 @@ The entire application is contained within the `index.js` file.
 
 `POST /user/register`
 
-#####Payload
+##### Payload
 
 	{ 
         "name" : "admin",
@@ -33,14 +33,14 @@ The entire application is contained within the `index.js` file.
 
 `POST /user/login`
 
-#####Payload
+##### Payload
 
 	{ 
         "email": "admin@gmail.com",
         "password": "admin@1212"
 	}
 	
-#####Response
+##### Response
 
     { 
         "status": "true",
@@ -54,7 +54,7 @@ The entire application is contained within the `index.js` file.
 
 `headers: {auth-token: ***}`
 
-#####Payload
+##### Payload
 
 	{ 
         "title": "Lorem impsum",
